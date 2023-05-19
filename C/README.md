@@ -4,3 +4,4 @@ C Programming Language Examples
 1. 0x01-variables_if_else_while
 2. 0x02-functions_nested_loops
 3. 0x03-loops
+4. 0x04-pointers_arrays
