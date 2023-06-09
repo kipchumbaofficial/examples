@@ -6,3 +6,4 @@ C Programming Language Examples
 3. 0x03-loops
 4. 0x04-pointers_arrays
 8. 0x08-recursion
+9. 0x09-static_libraries
