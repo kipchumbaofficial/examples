@@ -7,3 +7,4 @@ C Programming Language Examples
 4. 0x04-pointers_arrays
 8. 0x08-recursion
 9. 0x09-static_libraries
+10. 0x0B-malloc_free
