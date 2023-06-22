@@ -9,3 +9,4 @@ C Programming Language Examples
 9. 0x09-static_libraries
 10. 0x0B-malloc_free
 11. 0x0F. C - Function pointers
+12. 0x10-variadic_functions
