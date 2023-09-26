@@ -1,0 +1,1 @@
+-pedantic -std=gnu89 -Werror -Wall 
