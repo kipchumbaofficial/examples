@@ -1,34 +1,14 @@
-#!/usr/bin/python3
-'''
-Addition function
-'''
+import unittest
+from my_calculations import Calculations
 
+class TestCalculations(unittest.TestCase):
+    def test_sum(self):
+        calculations = Calculations(8, 2)
+        self.assertEqual(calculations.get_sum(), 10, 'The sum is wrong')
 
-def add(a, b):
-    """
-    >>> add(9.5, 9)
-    18
-    
-    >>> add(1, 2)
-    3
-    
-    >>> add(a, b)
-    Traceback (most recent call last):
-     ...
-    NameError: name 'a' is not defined
-    
-    >>> add(True, Talse)
-    Traceback (most recent call last):
-     ...
-    NameError: name 'Talse' is not defined
-    
-    >>> add(True, False)
-    1
+    def test_difference(self):
+        calculation = Calculations(4, 2)
+        self.assertEqual(calculation.get_difference(), 2, 'The difference is wrong')
 
-    >>> add('a', 'b')
-    Traceback (most recent call last):
-     .....
-    ValueError: invalid literal for int() with base 10: 'a'
-
-    """
-    return int(a) + int(b)
+if __name__ == '__main__':
+    unittest.main()
