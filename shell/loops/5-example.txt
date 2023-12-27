@@ -1,0 +1,5 @@
+A while loop is a statement that iterates over
+a block of code till the condition specified is evaluated to false.
+We can use this statement or loop in our program
+when do not know how many times the condition is goingn
+to evaluate to true before evaluating to false.
