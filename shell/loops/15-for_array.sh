@@ -2,7 +2,7 @@
 
 arr=("Code" "Eat" "Sleep" "Repeat")
 
-for n in ${arr[@]};
+for n in "${arr[@]}";
 do
-    echo $n
+    echo "$n"
 done
