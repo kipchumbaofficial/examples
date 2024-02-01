@@ -22,5 +22,7 @@ extern struct node *root;
 
 void insert(int data);
 void in_order(struct node *root);
+void pre_order(struct node *root);
+void post_order(struct node *root);
 
 #endif

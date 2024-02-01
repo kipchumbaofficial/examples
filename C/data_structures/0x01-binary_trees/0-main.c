@@ -18,5 +18,11 @@ int main(void)
 	printf("in-order Traversal: ");
 	in_order(root);
 	printf("\n");
+	printf("Pre-order Traversal: ");
+	pre_order(root);
+	printf("\n");
+	printf("Post-order Traversal: ");
+	post_order(root);
+	printf("\n");
 	return (0);
 }
