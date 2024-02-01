@@ -24,5 +24,6 @@ void insert(int data);
 void in_order(struct node *root);
 void pre_order(struct node *root);
 void post_order(struct node *root);
+struct node *search(int data);
 
 #endif
