@@ -11,5 +11,5 @@ with urllib.request.urlopen('https://python.org/') as response:
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
         shutil.copyfileobj(response, tmp_file)
 
-with open(tmp_file.name) as html:
+with open(tmp_file.name, 'rb') as html:
     pass
