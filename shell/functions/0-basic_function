@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Bash function that takes in arguments and print them out
+
+DEFAULT=default # default Parameter value
+
+func () {
+    if [ -z "$1" ] # Check if parameter is null
+    then
+        echo "-pararmeter 1 is  zero length.-"
+    else
+        echo "-parametert 1 is $1.-" # Print out the parameter
+    fi
+
+    variable=${1-$DEFAULT}
+    echo "variable is $variable"
+
+    if [ "$2" ]
+    then
+        echo "-parameter 2 is $2.-"
+    fi
+    return 0
+}
+
+echo
+echo "Nothing is passed"
+func
+echo
+echo "Zero-length parameter passed"
+func ""
+echo
+echo "Passed one parametr"
+func first
+echo
+echo "Two parameters passed"
+func first second
+echo
+echo "1st null second passed"
+func "" second
+echo
+exit 0
