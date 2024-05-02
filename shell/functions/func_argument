@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Bash function to accept CL arguments
+
+func () {
+    echo "$1"
+}
+
+echo
+echo "First call with no arguments"
+echo "See if command line argument is passed"
+func
+
+echo "======================================="
+echo
+echo "Second call to function with command line arguments"
+func $1
+
+exit 0
