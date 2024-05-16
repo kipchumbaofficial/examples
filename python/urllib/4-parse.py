@@ -6,10 +6,8 @@ from urllib import parse, request
 url = 'https://pythonprogramming.net/search/'
 query = {'q': 'basic'}
 querystring = parse.urlencode(query)
-print(querystring)
-
-req = url + '?' + querystring
-print(req)
+querystring = querystring.encode('ascii')
+req = request.Request(url, querystring)
 resp = request.urlopen(req)
 
 print(resp.code)

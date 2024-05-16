@@ -2,6 +2,7 @@
 /**
  * binarySearch - Iterative binary Search Algorithm
  * @arr: Array to search
+ * @size: Size of the array
  * @x: Target to search for
  *
  * Return: -1 or the index of the target
