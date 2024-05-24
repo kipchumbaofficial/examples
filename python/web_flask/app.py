@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+'''A simple Web service that has several endpoints and authentication'''
 from flask import Flask, jsonify, abort, make_response, request, url_for
 from flask_httpauth import HTTPBasicAuth
+
 
 auth = HTTPBasicAuth()
 app = Flask(__name__)
