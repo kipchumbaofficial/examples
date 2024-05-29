@@ -21,5 +21,16 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/comments', strict_slashes=False)
+def comments():
+    comments = [
+            'This is the First comment',
+            'This is the Second comment',
+            'This is the Third comment',
+            'This is the Forth comment'
+            ]
+    return render_template('comments.html', comments=comments)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
