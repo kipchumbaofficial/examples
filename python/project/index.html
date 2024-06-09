@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Constitution Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Kenyan Constitution Chatbot</h1>
+        <form id="chat-form">
+            <div class="mb-4">
+                <label for="query" class="block text-sm font-medium text-gray-700">Your question</label>
+                <input type="text" id="query" name="query" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded">Ask</button>
+        </form>
+        <div id="response" class="mt-6 p-4 bg-gray-100 rounded"></div>
+    </div>
+    <script>
+        $('#chat-form').on('submit', function(event) {
+            event.preventDefault();
+            const query = $('#query').val();
+            $.ajax({
+                url: '/ask',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ query: query }),
+                success: function(response) {
+                    $('#response').html(`<strong>Answer:</strong> ${response.answer}`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
